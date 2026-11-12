@@ -120,6 +120,9 @@ class CommandLineFormatter
         $this->previous = $character_sequence;
     }
 
-
+    public function getEightBitForegroundColor(int $colorNumber): string
+    {
+        return "\033[38;5;" . (string) $colorNumber . 'm';
+    }
 
 }
